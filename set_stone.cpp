@@ -121,19 +121,19 @@ void GoGame::act(Command c) {
 		}
 		break;
 	case Up:
-		new_pos = (Pos){ cursor.h - 1, cursor.w };
+		new_pos = { cursor.h - 1, cursor.w };
 		if (new_pos.is_in_board()) cursor = new_pos;
 		break;
 	case Right:
-		new_pos = (Pos){ cursor.h, cursor.w + 1 };
+		new_pos = { cursor.h, cursor.w + 1 };
 		if (new_pos.is_in_board()) cursor = new_pos;
-		break;
+		break;              
 	case Left:
-		new_pos = (Pos){ cursor.h, cursor.w - 1 };
+		new_pos = { cursor.h, cursor.w - 1 };
 		if (new_pos.is_in_board()) cursor = new_pos;
 		break;
 	case Down:
-		new_pos = (Pos){ cursor.h + 1, cursor.w };
+		new_pos = { cursor.h + 1, cursor.w };
 		if (new_pos.is_in_board()) cursor = new_pos;
 		break;
 	}
