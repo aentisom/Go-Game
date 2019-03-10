@@ -10,12 +10,9 @@ GoGame * Piece::goGame = &go;
 
 void loop(void) {
 
-	Command c;
 	do {
 		go.refresh();
-		if (c = (Command)getch()) {
-			go.act(c);
-		}
+		go.act((Command)getch());
 	} while (true);
 }
 
